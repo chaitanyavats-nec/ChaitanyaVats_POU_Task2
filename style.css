@@ -1,0 +1,265 @@
+
+h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 24px; /* Adjust the font size as needed */
+  font-weight: bold;
+  margin-bottom: 10px; /* Add spacing between h2 and other elements */
+}
+p {
+  font-weight: 50;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px; /* Adjust the font size as needed */
+  line-height: 1.5; /* Adjust line height for readability */
+  margin-bottom: 20px; /* Add spacing between paragraphs */
+}
+
+em{
+  color: rgb(180, 180, 180);
+}
+
+svg {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Define the CSS animation for the pulsing effect */
+  @keyframes pulse {
+    0% {
+      stroke-width: 2;
+      opacity: 0.6;
+    }
+    50% {
+      stroke-width: 3;
+      color: rgb(135, 79, 188);
+      opacity: 1;
+    }
+    100% {
+      stroke-width: 2;
+      opacity: 0.6;
+    }
+  }
+  
+  /* Apply the animation to all links with the "pulse" class */
+  .line-link {
+    animation: pulse 2s infinite;
+  }
+  
+/* Hover styles for triangles */
+.triangle:hover polygon {
+    fill: red;
+    cursor: pointer;
+}
+
+  
+/* Hover styles for squares */
+.square:hover rect {
+    fill: blue;
+    cursor: pointer;
+}
+  
+/* Hover styles for circles */
+.circle:hover circle {
+    fill: orange;
+}
+  
+/* Hover styles for links (lines) */
+.link:hover {
+    stroke: red;
+}
+  
+.square-link {
+    stroke: black;
+    stroke-width: 3;
+    padding: 10px;
+    animation: pulse 2s infinite;
+}
+
+.square-link:hover{
+  animation: pulse 1s infinite;
+  cursor: pointer;
+}
+
+.circle-link {
+  stroke: rgb(255, 44, 251);
+  stroke-width: 1;
+  opacity: 0.4;
+}
+.circle-link:hover{
+  stroke-width: 4;
+  stroke: red;
+  opacity: 0.6;
+}
+.circle:hover{
+  fill: rgb(255, 44, 251);
+}
+
+@keyframes shadows {
+  0% { text-shadow: #48abe0 0 0 10px; };
+  50% { text-shadow: blueviolet 0 0 10px; };
+  75% { text-shadow: rebeccapurple 0 0 10px;};
+  100% { text-shadow: #48abe0 0 0 10px; };
+ }
+
+
+#circle20-link{
+  z-index: 20;
+  stroke-width: 10;
+  stroke: black;
+  opacity: 0.8;
+  animation: shadows 2s infinite;
+}
+
+#tooltip {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  pointer-events: none; /* Allow mouse events to pass through the tooltip */
+}
+
+.overlay {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  padding: 10px;
+  border-radius: 5px;
+  pointer-events: none;
+  z-index: 1;
+  /* Additional styles for line overlay */
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Initially hidden */
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: #fff;
+  transition: left 0.3s;
+}
+
+.sidebar-toggle-btn {
+  padding: 4px;
+  border-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 20;
+  left: 400px;
+  background-color: rgb(208, 208, 208);
+  border: none;
+  cursor: pointer;
+  z-index: 400;
+  stroke: #333;
+}
+
+.sidebar-content {
+  padding: 20px;
+}
+
+/* Hover styles for triangles */
+.triangle:hover polygon {
+  fill: red;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+/* Hover styles for squares */
+.square:hover rect {
+  fill: blue;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+/* Hover styles for circles */
+.circle:hover circle {
+  fill: orange;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+
+/* Style individual buttons */
+#clickButton,
+#clickButton2,
+#moveSquaresButton {
+  right: 10px; /* Add some spacing between buttons */
+}
+
+/* Add this CSS to style the submenus */
+.submenu {
+  position: relative;
+  display: block;
+  margin-top: 10px;
+}
+
+.submenu-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.submenu:hover{
+  background-color: black;
+  color: #ffffff;
+  font-size: larger;
+}
+
+.submenu-content {
+  width: 250px;
+  display: none;
+  background-color: #333;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 1;
+}
+
+/* Show the submenu content when the button is hovered */
+.submenu:hover .submenu-content {
+  display: block;
+}
+
+
+#buttons-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#resetProgramButton, #clickButton {
+  margin-bottom: 10px;
+}
+@keyframes pulse2 {
+  0% {
+    stroke-width: 1;
+    opacity: 0.3;
+  }
+  50% {
+    stroke-width: 1;
+    color: rgb(135, 79, 188);
+    opacity: 0.2;
+  }
+  100% {
+    stroke-width: 1;
+    opacity: 0.3;
+  }
+}
+
+.thirdline{
+  animation: pulse 0.5s infinite;
+}
